@@ -1,3 +1,12 @@
+:root{
+    --color-white: #fff;
+    --color-red: #e63636;
+    --color-dark1: #687089;
+    --color-dark2: #eff1f8;
+    --color-Blue1: rgb(8, 48, 158);
+    --color-Blue2: #007bff;
+    --color-Blue3: #124265;
+}
 *{
   margin: 0;
   padding: 0;
@@ -12,27 +21,27 @@
   flex-wrap: wrap;
 }
 header{
-  background-color: white;
+  background-color:var(--color-white);
   padding: 20px 0;
-  border-bottom: 1px solid rgb(200, 200, 200);
+  border-bottom: 1px solid var(--color-dark2);
 }
 .logo{
   width: 56px;
   height: 56px;
   float: left;
   font-size: 0;
-  background: url(img/logo.png) center center/56px no-repeat;
+  background: url(img/logo.png) center center/70px no-repeat;
   }
 .logo h2{
   font-weight: normal;
-  font-size: 22px;
+  font-size: 25px;
 }
 .menu{
   width: 80%;
   text-align: right;
 }
 .menu a{
-  color:#16507b;
+  color:var(--color-Blue2);
   font-size: 14px;
   text-decoration: none;
   display: inline-block;
@@ -40,22 +49,24 @@ header{
   
 }
 .menu a:hover{
-  color: #007bff;
+  color: var(--color-Blue1);
 }
 .menu .btn-menu{
   background-color: #007bff;
   display: inline-block;
   padding: 8px 16px;
-  color: white;
+  color:var(--color-white);
   border-radius: 6px;
 }
 .menu .btn-menu:hover{
   background-color: #124265;
-  color: white;
+  color:var(--color-white);
 }
 /* section main */
 section.main{
-  background-image: url('img/fundo.jpg');
+
+  background-color: var(--color-dark1);
+  color: var(--color-white);
   padding: 70px 0;
   background-position: center;
   background-size: cover;
@@ -69,23 +80,26 @@ section.main{
 
 }
 .main__cta h2{
-  color: #16507b;
+  color: var(--color-white);
   font-size: 40px;
 }
 .main__cta p{
-  color: gray;
+  color: var(--color-white);
   font-size: 19px;
   margin: 10px 0;
 }
 .main__cta button{
-  background-color: #007bff;
+  background-color: var(--color-Blue2);
   display: inline-block;
   padding: 8px 30px;
-  color: white;
+  color:var(--color-dark2);
   border-radius: 6px; 
   font-size: 16px;
   border: 0;
   cursor: pointer;
+}
+.main__cta button:hover{
+  background-color: var(--color-Blue3);
 }
 .tipos{
   display: flex;
@@ -93,7 +107,7 @@ section.main{
 }
 .tipos-single{
   border-radius: 10px;
-  background-color: white;
+  background-color:var(--color-white);
   width: 23%;
   margin-right: 2%;
   padding: 50px 20px;
@@ -183,7 +197,7 @@ section.conquistas{
   width:100%;
   text-align: center;
   background-color:white;
-  border-bottom:2px solid blue;
+  border-bottom:2px var(--color-Blue2);
   display: block;
   opacity: 0;
   transition: 1s;
@@ -201,7 +215,7 @@ section.conquistas{
 .menu-items a{
   display: block;
   text-decoration: none;
-  color:blue;
+  color: var(--color-Blue2);
   cursor: pointer;
 }
 
