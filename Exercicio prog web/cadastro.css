@@ -16,7 +16,8 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--color-dark2);
+    
+    background-color: var(--color-dark2); 
     color: var(--color-white);
     display: flex;
     justify-content: center;
