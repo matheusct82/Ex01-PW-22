@@ -9,12 +9,12 @@ $port = '3306';
 $conexao = mysqli_connect($server, $username, $password, $database, $port);
 
 if ($conexao->connect_errno) {
-    echo 'Falha ao conectar ao MySQL: (' .
+    // echo 'Falha ao conectar ao MySQL: (' .
         $conexao->connect_errno .
         ') ' .
         $conexao->connect_errno;
 }else{
-  echo 'conect sucess';
+  // echo 'conect sucess';
 }
 
 

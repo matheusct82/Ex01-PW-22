@@ -43,7 +43,8 @@ session_start();
       <div class="main__cta">
         <h2>Algo quebrou?</h2>
         <p>Podemos te ajudar!</p>
-        <button>Contratar</button>
+        <button>Contratar<a href="servico.php"></a></button>
+        
       </div>
       <div class="tipos">
         <div class="tipos-single">

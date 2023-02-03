@@ -1,40 +1,42 @@
 <?php
-    $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
-    $repetirsenha = $_POST['repetirsenha'];
+if (isset($_POST["botao-submit"])) {
+  $usuario = $_POST['usuario'];
+  $senha = $_POST['senha'];
+  $repetirsenha = $_POST['repetirsenha'];
 
-    $hash = md5($senha);
-    ?>
+  $hash = md5($senha);
+  ?>
 
 
     <div class="space-insert">
 
 <?php
-include_once 'connect.php';
+    include_once 'connect.php';
 
-$sql_verificar = "SELECT * FROM usuario WHERE usuario = '$usuario'";
+    $sql_verificar = "SELECT * FROM usuario WHERE usuario = '$usuario'";
 
-$sql = "INSERT INTO usuario (usuario, senha) VALUES ('$usuario', '$hash')";
+    $sql = "INSERT INTO usuario (usuario, senha) VALUES ('$usuario', '$hash')";
 
-if (mysqli_num_rows(mysqli_query($connection, $sql_verificar))> 0) {
-  echo "Usuário já cadastrado!
+    if (mysqli_num_rows(mysqli_query($connection, $sql_verificar)) > 0) {
+      echo "Usuário já cadastrado!
   <a href='index.php'>Voltar</a>
   ";
-} else {
-  if ( ($senha != "") && ($senha == $repetirsenha) ) {
-    if ($result = mysqli_query($connection, $sql)) {
-        echo "Usuário cadastrado com sucesso.
+    } else {
+      if (($senha != "") && ($senha == $repetirsenha)) {
+        if ($result = mysqli_query($connection, $sql)) {
+          echo "Usuário cadastrado com sucesso.
         <a href='entrar.php'>login</a>
       ";
-    } else {
-        echo "Erro ao cadastrar usuário.
+        } else {
+          echo "Erro ao cadastrar usuário.
         <a href='index.php'>Voltar</a>
         ";
-      }
-    } else {
-      echo "A senha está em branco ou não confere com a sua correspondente
+        }
+      } else {
+        echo "A senha está em branco ou não confere com a sua correspondente
       <a href='index.php'>Voltar</a>";
-  }
+      }
+    }
 }
 
 ?>
