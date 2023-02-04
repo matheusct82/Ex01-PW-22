@@ -6,87 +6,74 @@
     --color-Blue1: rgb(8, 48, 158);
     --color-Blue2: #007bff;
     --color-Blue3: #124265;
-    --color-black: rgb(0, 0, 0);
 }
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    
-    background-color: var(--color-dark2); 
-    color: var(--color-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.content{
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-dark2);
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
     background-color: var(--color-dark1);
-    padding: 2rem;
+    padding: 20px;
     border-radius: 10px;
-    min-width: 30%;
-}
-
-h1{
-    margin-bottom: 1rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-}
-
-.content form{
+  }
+  
+  h1 {
+    color: var(--color-Blue1);
+    margin-bottom: 20px;
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-}
-
-.span-required{
-    font-size: 12px;
-    margin: 2px 0 0 1px var(--color-red);
-    color: var(--color-white);
-    display: none;
-}
-
-.inputs{
-    padding: 8px 5px;
-    outline: none;
-    border-radius: 5px;
-    background-color: var(--color-dark2);
-    border: 2px solid var(--color-dark2);
-    color: var(--color-black);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .field {
+    margin-bottom: 20px;
     width: 100%;
-    box-sizing: border-box;
-    transition: .3s;
-}
-
-.inputs:focus{
-    border-color: var(--color-Blue2);
-}
-
-
-button[type="submit"]{
-    padding: 1rem;
-    font-size: 1rem;
-    outline: none;
+    text-align: left;
+  }
+  
+  .field-label {
+    font-weight: bold;
+    color: var(--color-Blue2);
+  }
+  
+  .field-data input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-Blue3);
+    border-radius: 5px;
+    color: var(--color-Blue3);
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .submit-button {
+    background-color: var(--color-Blue2);
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    margin-top: 1rem;
-    background-color: var(--color-Blue2);
-    color: var(--color-white);
     cursor: pointer;
-    transition: .3s;
-}
-
-button[type="submit"]:hover{
-    background-color: var(--color-Blue1);
-}
-
-@media screen and (max-width: 576px) {
-    .box-select{
-        flex-direction: column;
-        gap: 5px;
-    }
-}
+  }
+  
+  .submit-button:hover {
+    background-color: var(--color-Blue3);
+  }
+  
+  a {
+    color: var(--color-red);
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+  }
+  

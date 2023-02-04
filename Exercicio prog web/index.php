@@ -31,10 +31,9 @@ session_start();
     <div class="menu-mobile">
         <i class="fas fa-bars menu-mobile-icon"></i>
         <div class="menu-items">
-            <a href="">Home</a>
-            <a href="">Sobre</a>
-            <a href="">Contato</a>
-            <a href="entrar.php">entrar</a>
+          <a href="index.php">Home</a>
+          <a href="entrar.php">entrar</a>
+          <a href="cadastro.php">cadastro</a>
         </div>
     </div>
   </header>
@@ -43,7 +42,9 @@ session_start();
       <div class="main__cta">
         <h2>Algo quebrou?</h2>
         <p>Podemos te ajudar!</p>
-        <button>Contratar<a href="servico.php"></a></button>
+        <div><button><a href="servico.php">Contratar </a></button>
+        
+      </div>
         
       </div>
       <div class="tipos">

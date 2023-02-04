@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('conexao.php');
-
+include_once 'header.php'; 
 
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
     echo "Bem-vindo, " . $_SESSION['username'];

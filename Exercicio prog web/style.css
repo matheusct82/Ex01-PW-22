@@ -92,15 +92,16 @@ section.main{
   background-color: var(--color-Blue2);
   display: inline-block;
   padding: 8px 30px;
-  color:var(--color-dark2);
-  border-radius: 6px; 
+  color: var(--color-dark2);
+  border-radius: 6px;
   font-size: 16px;
   border: 0;
   cursor: pointer;
-}
-.main__cta button:hover{
+  text-decoration: none;
+} 
+ .main__cta button:hover{
   background-color: var(--color-Blue3);
-}
+} 
 .tipos{
   display: flex;
   flex-wrap: wrap;

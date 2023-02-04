@@ -15,6 +15,7 @@ session_start();
 </head>
 
 <body>
+<?php include_once 'header.php'; ?>
                     <h3 class="title has-text-grey">Sistema de Login</h3>
                     <?php
                     if(isset($_SESSION['nao_autenticado'])):
